@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gloomaps scheme="1.0">
+  <link>https://www.gloomaps.com/ZzqkAo4WTi</link>
+  <pubdate>11/29/2023</pubdate>
+  <section>
+    <box>
+      <text>Home</text>
+      <propa>rgb(128, 0, 128)</propa>
+      <propb>#ffffff</propb>
+      <member>
+        <box>
+          <text>Courses</text>
+          <propa>rgb(128, 0, 128)</propa>
+          <propb>#ffffff</propb>
+          <member>
+            <box>
+              <text>HTML</text>
+              <propa>rgb(128, 0, 128)</propa>
+              <propb>#ffffff</propb>
+              <member/>
+            </box>
+            <box>
+              <text>CSS</text>
+              <propa>rgb(128, 0, 128)</propa>
+              <propb>#ffffff</propb>
+              <member/>
+            </box>
+            <box>
+              <text>JavaScript</text>
+              <propa>rgb(128, 0, 128)</propa>
+              <propb>#ffffff</propb>
+              <member/>
+            </box>
+          </member>
+        </box>
+        <box>
+          <text>About us</text>
+          <propa>rgb(128, 0, 128)</propa>
+          <propb>#ffffff</propb>
+          <member/>
+        </box>
+        <box>
+          <text>Contact</text>
+          <propa>rgb(128, 0, 128)</propa>
+          <propb>#ffffff</propb>
+          <member/>
+        </box>
+        <box>
+          <text>Review</text>
+          <propa>rgb(128, 0, 128)</propa>
+          <propb>#ffffff</propb>
+          <member/>
+        </box>
+        <box>
+          <text>Site Map</text>
+          <propa>rgb(128, 0, 128)</propa>
+          <propb>#ffffff</propb>
+          <member/>
+        </box>
+      </member>
+    </box>
+  </section>
+</gloomaps>

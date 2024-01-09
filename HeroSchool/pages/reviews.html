@@ -1,0 +1,427 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../style/mystyle.css">
+    <link rel="icon" type="image/x-icon" href="../assets/logo.PNG">
+
+    <title>Reviews</title>
+    <style>
+        input[type=text],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .rate {
+            text-align: center;
+
+
+        }
+
+        .rate:not(:checked)>input {
+            display: none;
+
+
+        }
+
+        .rate:not(:checked)>label {
+
+            color: #ccc;
+            font-size: 40px;
+            float: right;
+        }
+
+        .rate:not(:checked)>label:before {
+
+
+            content: '★ ';
+
+        }
+
+        .rate>input:checked~label {
+            color: #ffc700;
+        }
+
+        .rate:not(:checked)>label:hover,
+        .rate:not(:checked)>label:hover~label {
+            color: #deb217;
+        }
+
+
+
+
+        input[type=submit] {
+            width: 100%;
+            background-color: purple;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: rgb(108, 0, 108);
+        }
+
+
+
+
+        textarea {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+
+            height: 150px;
+
+
+
+            resize: vertical;
+        }
+
+
+
+        input[type=range] {
+            width: 100%;
+            accent-color: purple;
+
+
+
+        }
+
+        datalist {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            writing-mode: vertical-lr;
+            width: 100%;
+        }
+
+        .Center {
+            width: 200px;
+            height: 150px;
+
+
+
+
+        }
+
+        .bootstap-nav {
+
+            padding-bottom: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--BootStrap Script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!--Navigator-->
+
+    <div class="row bootstap-nav">
+        <nav class="navbar navbar-expand-lg  fixed-top">
+            <div class="container-fluid">
+
+                <!--Logo-->
+                <a class="navbar-brand" style="float: left;" href="home.html"><img src="../assets/logo.PNG" height="80"
+                        width="150"></a>
+
+
+
+                <!--Small Navigator-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar " aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas  offcanvas-direction" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="../assets/logo.PNG" height="80"
+                                width="150">
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+
+                    <!--Desktop Navigator-->
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="home.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Courses
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="courses/html/introduction.html">HTML</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="courses/javascript/introduction.html">JavaScript</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="courses/css/introduction.html">CSS</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="about.html">About Us</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link " href="contact.html">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active1" href="reviews.html">Reviews</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="siteMap.html">SiteMap</a>
+                            </li>
+                        </ul>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </nav>
+
+
+    </div>
+
+    <!--end nav-->
+
+    <!--Time and Date-->
+    <div class="row">
+        <div style="width: 200px;">
+            <p id="current-time" style="text-align: center; "></p>
+        </div>
+    </div>
+
+
+    <div class=" row" style="text-align: center;">
+        <h1>Your opinion matters!</h1>
+        <p>Please share your experiance for your recent courses. Please take a moment and rate us!</p>
+    </div>
+
+
+
+    <div class="row   ">
+
+        <!--empty col-->
+        <div class="col-lg-4"></div>
+
+
+
+        <!--Contact col-->
+        <div class="col-lg-4">
+            <form name="myForm" action="submitReviews.html" onsubmit="return validateForm()">
+
+                <div class="row"> <label for="name">Full Name</label>
+                    <input type="text" name="name">
+                    <p class="invalid" id="invalidName"></p>
+                </div>
+
+                <div class="row"> <label for="email">Email</label>
+                    <input type="text" id="email">
+
+                    <p class="invalid" id="invalidEmail"></p>
+                </div>
+
+
+
+
+
+                <div class="row" style="padding-top: 60px; text-align: center;">
+
+
+                    <div class="row">
+                        <p>How likely would you be to recommend HeroSchool on scale 1..5?</p>
+
+                        <div class="  rate Center  ">
+
+
+                            <input type="radio" id="1star5" name="rate1" value=5 />
+                            <label for="1star5" title="5 Stars"></label>
+                            <input type="radio" id="1star4" name="rate1" value=4 />
+                            <label for="1star4" title="4 Stars"></label>
+                            <input type="radio" id="1star3" name="rate1" value=3 />
+                            <label for="1star3" title="3 Stars"></label>
+                            <input type="radio" id="1star2" name="rate1" value=2 />
+                            <label for="1star2" title="2 Star"></label>
+                            <input type="radio" id="1star1" name="rate1" value=1 />
+                            <label for="1star1" title="1 Star"></label>
+                            <br><br><br>
+                            <p class="invalid" id="invalidRadio1"></p>
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <p>Program Flow and Agenda on scale 1..5?</p>
+
+                        <div class=" rate Center  ">
+
+
+                            <input type="radio" id="star5" name="rate2" value=5 />
+                            <label for="star5" title="5 Stars"></label>
+                            <input type="radio" id="star4" name="rate2" value=4 />
+                            <label for="star4" title="4 Stars"></label>
+                            <input type="radio" id="star3" name="rate2" value=3 />
+                            <label for="star3" title="3 Stars"></label>
+                            <input type="radio" id="star2" name="rate2" value=2 />
+                            <label for="star2" title="2 Star"></label>
+                            <input type="radio" id="star1" name="rate2" value=1 />
+                            <label for="star1" title="1 Star"></label>
+
+                            <p class="invalid" id="invalidRadio2"></p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="row">
+
+                        <p>is it easy to find information on the site?</p>
+
+
+                        <input type="range" list="values" name="tests" step="25">
+                        <datalist id="values">
+                            <option value="0" label="Very Hard"></option>
+                            <option value="25" label="Hard"></option>
+                            <option value="50" label="AVG"></option>
+                            <option value="75" label="Easy"></option>
+                            <option value="100" label="Very Easy"></option>
+                    </div>
+
+
+
+                    <div class="row" style="padding-top: 60px; text-align: left;">
+                        <label style="font-size: larger; " for="comments ">specafic
+                            feedback? Please write it down below..</label><br>
+
+                        <textarea id="comments" name="comments" placeholder="(optional)" rows="5"></textarea><br></br>
+
+                        <input type="submit" value="Submit">
+                    </div>
+
+                </div>
+        </div>
+        </form>
+
+        <div class="col-lg-4"></div>
+        <script src="../script/time.js"></script>
+        <script>
+
+            function validateForm() {
+
+                //Values
+                const name = document.forms["myForm"]["name"].value;
+                const email = document.forms["myForm"]["email"].value;
+                const rate1 = document.getElementsByName("rate1");
+                const rate2 = document.getElementsByName("rate2");
+                var tests = document.forms["myForm"]["tests"].value;
+
+
+                var radioVal1 = 0;
+                var radioVal2 = 0;
+                var nameVal = false;
+                var emailVal = false;
+
+
+
+                //Regular Expression 
+                const eamilregex = /(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@[*[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+]*/;
+                const nameregex = /^[A-Za-z\s]+$/;
+
+
+                //Name Validation
+                if (name == "") { document.getElementById("invalidName").innerHTML = "Name is Required!"; }
+                else if (!(nameregex.test(name))) { document.getElementById("invalidName").innerHTML = "Please enter real name!"; }
+                else if (name.length < 6) { document.getElementById("invalidName").innerHTML = "Too Short Name!"; }
+
+                else if (name.length > 30) { document.getElementById("invalidName").innerHTML = "Too Long Name!"; }
+
+
+                else { document.getElementById("invalidName").innerHTML = ""; nameVal = true; }
+
+
+
+                //Email Validation
+                if (email == "") { document.getElementById("invalidEmail").innerHTML = "Email is Required!"; }
+                else if (!(eamilregex.test(email))) { document.getElementById("invalidEmail").innerHTML = "Invalid Email!"; }
+                else { document.getElementById("invalidEmail").innerHTML = ""; emailVal = true; }
+
+
+                //Rating Validation
+                var i = 0;
+
+
+                //Q1
+                while (radioVal1 == 0 && i < rate1.length) {
+                    if (rate1[i].checked) { document.getElementById('invalidRadio1').innerHTML = ''; radioVal1 = Number(rate1[i].value); }
+                    i++;
+                }
+
+                if (!radioVal1) document.getElementById('invalidRadio1').innerHTML = 'Please make selection!';
+
+
+                //Q2
+                i = 0;
+                while (radioVal2 == 0 && i < rate2.length) {
+                    if (rate2[i].checked) { document.getElementById('invalidRadio2').innerHTML = ''; radioVal2 = Number(rate2[i].value); }
+                    i++;
+                }
+
+                if (!radioVal2) document.getElementById('invalidRadio2').innerHTML = 'Please make selection!';
+
+
+
+
+                //Full page Validation
+                if (!(nameVal && emailVal && radioVal1 >= 1 && radioVal2 >= 1)) { return false; }
+
+
+
+                //Total Rating Score
+                else {
+                    tests = tests / 20;
+                    var total = radioVal1 + radioVal2 + tests;
+                    total = (total / 3).toFixed(1);
+                    alert("Total Rating = " + total + " / 5.0");
+                }
+
+
+            }
+        </script>
+
+</body>
+
+</html>

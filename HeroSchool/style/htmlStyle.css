@@ -1,0 +1,127 @@
+.content {
+
+    font-size: larger;
+    text-align: left;
+
+
+}
+
+.content li {
+    font-size: large;
+    height: 40px;
+}
+
+
+.content tr {
+
+    font-size: 25px;
+    height: 50px;
+
+}
+
+h1 {
+    color: purple;
+}
+
+.sidenav {
+
+    margin-top: 100px;
+
+
+    width: 200px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+
+
+}
+
+.sidenav a {
+    width: 200px;
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.sidenav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.sidenav a.active {
+    font-weight: bold;
+    color: white;
+    background-color: purple;
+    width: 200;
+    text-align: center;
+}
+
+
+
+@media screen and (max-width:1200px) {
+
+
+
+    .content li {
+        font-size: small;
+
+
+
+    }
+
+    .content tr {
+        font-size: small;
+
+
+
+    }
+
+    .sidenav {
+
+        width: 150px;
+    }
+
+    .sidenav a {
+        width: 150px;
+        font-size: 10px;
+    }
+
+    .sidenav a.active {
+
+        width: 150px;
+
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+
+}
+
+
+@media screen and (max-width:600px) {
+
+
+
+    .content li {
+        height: 100px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .col-lg-10 {
+        padding-left: 200px;
+    }
+
+    .col-sm-10 {
+        padding-left: 200px;
+    }
+
+}

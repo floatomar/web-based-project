@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: mymove 1s;
+}
+
+.blink {
+    animation: blinker 1.3s linear infinite;
+}
+
+.topnav {
+    overflow: hidden;
+
+}
+
+.topnav a {
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: purple;
+    color: white;
+}
+
+s .end {
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.nav-link.active1 {
+    color: white;
+    background-color: purple;
+
+}
+
+.nav-link.active1 {
+    color: white;
+    background-color: purple;
+
+}
+
+.nav-link {
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    width: 110px;
+}
+
+.nav-link:hover {
+    background-color: #ddd;
+    color: white;
+}
+
+.offcanvas-direction {
+    width: 190px;
+    top: 0;
+    right: 0;
+
+
+}
+
+
+.dropdown-item.active1 {
+    color: white;
+    background-color: purple;
+}
+
+.center {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+.navbar-expand-lg {
+    padding-top: 1px;
+    background-color: white;
+
+}
+
+.bootstap-nav {
+    background-color: white;
+    padding-bottom: 150px;
+}
+
+
+.invalid {
+    color: red;
+}
+
+#current-time {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+}
+
+
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+        ;
+    }
+}
+
+
+@keyframes mymove {
+    from {
+
+
+
+        margin-top: -200px;
+
+    }
+
+    to {}
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 992px) {
+    .nav-link {
+        top: 0;
+        margin-top: -35px;
+    }
+}

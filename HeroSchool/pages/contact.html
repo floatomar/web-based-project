@@ -1,0 +1,318 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style/mystyle.css">
+    <link rel="icon" type="image/x-icon" href="../assets/logo.PNG">
+
+
+
+    <title>Contact</title>
+    <style>
+        input[type=text],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button[type=submit] {
+
+            background-color: purple;
+            color: white;
+            padding: 14px 20px;
+            float: right;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type=submit]:hover {
+            background-color: rgb(108, 0, 108);
+        }
+
+        .frame {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+
+        .card {
+            padding: 14px 16px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+
+        }
+
+
+        .column {
+            width: 42%;
+        }
+
+        a {
+
+            color: black;
+            text-decoration: none;
+
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        a:active {
+            color: black;
+        }
+
+        .bootstap-nav {
+
+            padding-bottom: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+
+        function validateForm() {
+
+            //Values
+            const name = document.forms["myForm"]["name"].value;
+            const email = document.forms["myForm"]["email"].value;
+            const message = document.forms["myForm"]["message"].value;
+
+            var nameVal = false;
+            var emailVal = false;
+            var messageVal = false;
+
+
+            //Regular Expression 
+            const eamilregex = /(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@[*[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+]*/;
+            const nameregex = /^[A-Za-z\s]+$/;
+
+
+
+            //Name Validation
+            if (name == "") { document.getElementById("invalidName").innerHTML = "Name is Required!"; }
+
+            else if (!(nameregex.test(name))) { document.getElementById("invalidName").innerHTML = "Please enter real name!"; }
+
+            else if (name.length < 6) { document.getElementById("invalidName").innerHTML = "Too Short Name!"; }
+
+            else if (name.length > 30) { document.getElementById("invalidName").innerHTML = "Too Long Name!"; }
+
+
+            else { document.getElementById("invalidName").innerHTML = ""; nameVal = true; }
+
+
+
+            //Email Validation
+            if (email == "") { document.getElementById("invalidEmail").innerHTML = "Email is Required!"; }
+            else if (!(eamilregex.test(email))) { document.getElementById("invalidEmail").innerHTML = "Invalid Email!"; }
+            else { document.getElementById("invalidEmail").innerHTML = ""; emailVal = true; }
+
+
+
+
+            //Messeage Validation
+            if (message.length < 20) {
+                document.getElementById("invalidMessage").innerHTML = "Too Short Message!.. Messeage at least should contain 20 character";
+            }
+            else { document.getElementById("invalidMessage").innerHTML = ""; messageVal = true; }
+
+
+
+            if (!(nameVal && emailVal && messageVal)) {
+
+                return false;
+
+            }
+
+
+
+
+
+        }
+
+    </script>
+
+    <!--BootStrap Script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!--Navigator-->
+    <div class="row bootstap-nav">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+
+                <!--Logo-->
+                <a class="navbar-brand" style="float: left; " href="home.html"><img src="../assets/logo.PNG" height="80"
+                        width="150"></a>
+
+
+
+                <!--Small Navigator-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar " aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas  offcanvas-direction" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="../assets/logo.PNG" height="80"
+                                width="150">
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+
+                    <!--Desktop Navigator-->
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="home.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Courses
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="courses/html/introduction.html">HTML</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="courses/javascript/introduction.html">JavaScript</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="courses/css/introduction.html">CSS</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About Us</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active1" href="contact.html">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="reviews.html">Reviews</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="siteMap.html">SiteMap</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--end nav-->
+
+
+    <!--Time and Date-->
+    <div class="row">
+        <div style="width: 200px;">
+            <p id="current-time"></p>
+        </div>
+    </div>
+    <div class="row">
+        <div style="text-align: center; padding-bottom: 100px;">
+            <h1
+                style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serifs;">
+                Contact Us</h1>
+
+
+            <em style="color: grey;">Fan? Drop a note!</em>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-5">
+                <h3>
+                    Address</h3>
+                <p>Swing by for a cup of coffee, or whatever.</p>
+
+                <a class="fa fa-map-marker" href="https://maps.app.goo.gl/v2jta9nTTj4a5f3Y6"> 11934 Shafa Badran-Amman,
+                    JO</a>
+                <br><br>
+
+                <a class="fa fa-phone" href="tel:+962799351045"> 0799351045</a>
+                <br><br>
+
+                <a class="fa fa-envelope" href="mailto:info@heroschool.edu.jo"> info@heroschool.jo</a>
+            </div>
+
+            <!--Contact Form-->
+            <div class="col-sm-6">
+                <div class=" card ">
+
+                    <form name="myForm" action="submitContact.html" onsubmit="return validateForm()">
+
+                        <div class="row">
+
+
+
+                            <label>Name</label>
+                            <input type="text" name="name">
+                            <p class="invalid" id="invalidName"></p>
+                        </div>
+                        <div class="row">
+                            <label>Email</label>
+                            <input type="text" name="email">
+                            <p class="invalid" id="invalidEmail"></p>
+
+
+                        </div>
+                        <div class="row">
+                            <label>Message</label>
+
+                            <textarea name="message" rosws="7"></textarea>
+                            <p class="invalid" id="invalidMessage"></p>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12"><button type="submit">Submit</button></div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <script src="../script/time.js"></script>
+</body>
+
+</html>
